@@ -2,9 +2,9 @@ import React from "react";
 import Order from "./Order.jsx";
 
 
-const Orders = ({order}) => {
+const Orders = ({orders}) => {
 
-    // const ordersList = orders.map(order => {
+    // const ordersList = orders.map(s => {
 
     //     <div id='order' key={order.id}>
 
@@ -12,10 +12,8 @@ const Orders = ({order}) => {
 
     // })
 
-    console.log('WHAT IS ORDERS', orders)
-
-    const ordersList = orders.map(order => console.log('WHAT IS ORDER IN ORDERLIST', order),<Order key={order.id} order={order} />)
-
+    const ordersList = orders.map(order => <Order key={order.id} order={order} />)
+//,<Order key={order.id} order={order} />
     return (
         <ul className="orders-list">
             {ordersList}

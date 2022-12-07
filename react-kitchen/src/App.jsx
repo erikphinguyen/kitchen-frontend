@@ -7,10 +7,10 @@ function App() {
 
   const [state, setState] = useState({
     completeOrders: {
-      1: { id: 1, name: "erik", address: "address", items: "pizza" }
+      1: { id: 1, name: "erik", address: "address", items: "pizza", isComplete: true }
     },
     incompleteOrders: {
-      2: { id: 2, name: "nguyen", address: "address", items: "pepsi" }
+      2: { id: 2, name: "nguyen", address: "address", items: "pepsi", isComplete: false }
     }
   })
 
@@ -18,8 +18,11 @@ function App() {
 
   return (
     <div className="App">
-      <OrderForm />
-      <Orders />
+      {/* <OrderForm /> */}
+      <span>Incomplete Orders:</span>
+      <Orders orders={Object.values(state.incompleteOrders)} state={state} setState={setState} />
+      <span>Complete Orders:</span>
+      <Orders orders={Object.values(state.completeOrders)} state={state} setState={setState} />
     </div>
   )
 }
