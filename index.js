@@ -1,11 +1,11 @@
-/*
+
 const render = () => {
     const root = document.getElementById("root");
     const App = document.createElement("div")
 
     App.innerText = "Hello World w/ JS";
 
-    const OrderForm = document.createElement("Form");
+    const OrderForm = document.createElement("form");
 
     const name = document.createElement("input");
     name.placeholder = "Name";
@@ -21,13 +21,13 @@ const render = () => {
     App.append(OrderForm)
     root.append(App);
 }
-*/
 
 document.addEventListener('DOMContentLoaded', () => {
     render();
 })
 
 // WHAT REACTS BUILDS HTML FOR US -- building HTML is basically editting nodes in a tree
+/*
 const Form = () => {
     return (
         <div>
@@ -35,3 +35,4 @@ const Form = () => {
         </div>
     )
 }
+*/
