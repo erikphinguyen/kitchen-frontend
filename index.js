@@ -1,11 +1,12 @@
-// <!-- <!DOCTYPE html>
-//     <div class="orders-container">
-//         <form onsubmit="some-fx">
-//             <input value="order.name">
-//             <input value="order.address">
-//             <input value="order.items">
-//             <button type="submit">Submit</button>
-//         </form>
-//     </div> -->
+const render = () => {
+    const root = document.getElementById("root");
+    const App = document.createElement("div")
 
+    App.innerText = "Hello World w/ JS";
 
+    root.appendChild(App);
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+    render();
+})
